@@ -21,6 +21,7 @@ agent:
 # commands to execute.
 # See https://docs.semaphoreci.com/article/62-concepts
 blocks:
+
   - name: Run tests
     task:
       # Set environment variables that your project requires.
@@ -68,3 +69,16 @@ blocks:
             # Gym builds and packages iOS apps.
             # See https://docs.fastlane.tools/actions/build_app/
             - bundle exec fastlane build
+
+  - name: Promotions
+    task:
+      prologue:
+      jobs:
+        - name: Everything
+          commands:
+            - echo 'Running tests'
+
+promotions:
+  - name: Production Deploy
+  pipeline_file: deploy_production.xml
+

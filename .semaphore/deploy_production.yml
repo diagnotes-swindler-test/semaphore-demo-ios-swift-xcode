@@ -1,0 +1,15 @@
+# .semaphore/deploy_production.yml
+version: 1.0
+name: Deploy to Production
+agent:
+  machine:
+    type: a1-standard-4
+    os_image: macos-mojave
+blocks:
+  - name: Deploy
+    task:
+      jobs:
+        - name: 'Everything'
+          commands:
+            - echo 'Deploying to Production...'
+
