@@ -74,5 +74,5 @@ blocks:
             - echo 'Running tests'
 promotions:
   - name: Production Deploy
-    pipeline_file: deploy_production.xml
+    pipeline_file: deploy_production.yml
 
