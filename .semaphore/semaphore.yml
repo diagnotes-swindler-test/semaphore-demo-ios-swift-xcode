@@ -69,7 +69,8 @@ blocks:
   - name: Promotions
     task:
       prologue:
-        # No prologue for this
+        commands:
+- echo 'Promotions prologue'
       jobs:
         - name: Everything
           commands:
