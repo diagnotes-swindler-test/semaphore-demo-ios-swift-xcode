@@ -68,9 +68,6 @@ blocks:
             - bundle exec fastlane build
   - name: Promotions
     task:
-      prologue:
-        commands:
-- echo 'Promotions prologue'
       jobs:
         - name: Everything
           commands:
